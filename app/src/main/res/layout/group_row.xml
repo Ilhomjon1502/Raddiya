@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="55dp"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingLeft="15dp"
+    android:background="@drawable/group_row"
+    >
+    <TextView
+        android:id="@+id/lblListHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textColor="#6e6144"
+        android:layout_gravity="center_vertical"
+        android:textStyle="italic"
+        android:maxLines="1"
+        android:paddingLeft="40dp"
+        />
+</LinearLayout>

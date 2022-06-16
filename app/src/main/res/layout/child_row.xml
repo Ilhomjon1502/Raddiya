@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dip"
+    android:background="@drawable/child_selector"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_height="25dp"
+        android:src="@drawable/note"
+        android:id="@+id/note"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/lblListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dip"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/note"
+        android:layout_centerVertical="true"
+        android:textColor="@color/text_color"
+        android:ellipsize="end"
+        android:singleLine="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="ViewTheme" parent="Base.ThemeOverlay.AppCompat.Dark">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <color name="f1">#91bb78</color>
+    <color name="f2">#eefcdc</color>
+    <color name="f3">#b2d89b</color>
+    <color name="text_color">#6e6144</color>
+    <color name="border_color">#b4a486</color>
+    <color name="select_color">#e5ddcc</color>
+    <color name="back_ground">#fbf4e4</color>
+    <color name="text_color1">#313131</color>
+    <color name="border_color1">#b4a486</color>
+    <color name="select_color1">#878787</color>
+    <color name="back_ground1">#ececeb</color>
+    <color name="bg_child">#fbf4e4</color>
+</resources>

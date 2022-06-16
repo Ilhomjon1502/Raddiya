@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item android:id="@+id/kiril" android:title="Кирил" android:icon="@drawable/kiril"></item>
+    <item android:id="@+id/lotin" android:title="Lotin" android:icon="@drawable/lotin"></item>
+    <item android:id="@+id/signs" android:title="Изоҳлар" android:icon="@drawable/belgilar"></item>
+    <item android:id="@+id/about" android:title="Дастур ҳақида" android:icon="@drawable/info"></item>
+
+</menu>

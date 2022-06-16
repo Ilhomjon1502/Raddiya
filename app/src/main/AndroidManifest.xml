@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="abduazam.uz.raddiya"
+    android:installLocation="auto"
+    android:configChanges="orientation|screenSize"
+    >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon_main"
+        android:label="Оқимларга раддия"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name=".MainActivity"
+            android:label="Оқимларга раддия" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ReadData"
+            android:label="@string/title_activity_read_data"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="abduazam.uz.raddiya.MainActivity" />
+        </activity>
+        <activity android:name=".DasturHaqida"></activity>
+        <activity android:name=".ViewNotifications"></activity>
+    </application>
+
+</manifest>

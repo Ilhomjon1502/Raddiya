@@ -1,0 +1,6 @@
+<bitmap
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/top"
+    android:tileModeX="repeat"
+    android:dither="true"
+    />

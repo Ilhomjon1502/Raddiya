@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="abduazam.uz.raddiya.ReadData"
+    android:keepScreenOn="true"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#c0bdb6"
+        android:id="@+id/ttt"
+        />
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/webView"
+        android:layout_below="@+id/ttt"
+        />
+</RelativeLayout>
