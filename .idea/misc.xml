@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/dell/Desktop/Raddiya/app/src/main/res/layout/activity_read_data.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/dell/Desktop/Raddiya/app/src/main/res/layout/dastur_haqida.xml" value="0.22826086956521738" />
+      </map>
+    </option>
+  </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
     <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />

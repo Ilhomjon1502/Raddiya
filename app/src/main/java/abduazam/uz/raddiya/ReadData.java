@@ -1,5 +1,6 @@
 package abduazam.uz.raddiya;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -7,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,9 +27,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class ReadData extends Activity {
+    private static final String TAG = "ReadData";
     private static final String LOG_APP_TAG = "tag";
     WebView webView;
     String html_data;
+    String header = "<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?>";
     String css_data;
     String status;
     String alifbo;
@@ -35,6 +39,7 @@ public class ReadData extends Activity {
     String file_name, sign_text;
     private String file_B = "kun_tun";
     final Context context = this;
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +48,10 @@ public class ReadData extends Activity {
         db = MainActivity.db;
 
         webView = (WebView)findViewById(R.id.webView);
+
+//        webView.getSettings().setAllowFileAccess(true);
+//        webView.getSettings().setAllowContentAccess(true);
+
         webView.getSettings().setBuiltInZoomControls(true);
         Intent i = getIntent();
         file_name = i.getStringExtra("read_data");
@@ -78,17 +87,18 @@ public class ReadData extends Activity {
         if(status.contains("ku"))
         {
             css_data ="<html><head><meta charset=\"utf-8\"/></head><style type=\"text/css\">@font-face{font-family:MyFont;src: url(\"trado.ttf\")}#i{text-indent:1.5em;text-align:justify;font-family:Arial;font-size:16;}#ia{font-family:MyFont;direction:rtl;text-indent:1.5em;text-align:justify;font-size:18;}#title {text-align:center;font-family:Arial;font-size:16;font-weight:bold;}#manba{font-size: 80%; font-style: italic;}</style><body style=\"background: #fbf4e4; overflow-y: auto; overflow-x: hidden;color:#313131;\">";
-            webView.loadData(css_data + html_data, "text/html; charset=utf-8", "UTF-8");
+            webView.loadData(header + html_data, "text/html; charset=utf-8", "UTF-8");
+            Log.d(TAG, "onCreate: "+html_data);
             status = "kun";
         }
         else if(status.contains("tu"))
         {
             css_data ="<html><head><meta charset=\"utf-8\"/></head><style type=\"text/css\">@font-face{font-family:MyFont;src: url(\"trado.ttf\")}#i{text-indent:1.5em;text-align:justify;font-family:Arial;font-size:16;}#ia{font-family:MyFont;direction:rtl;text-indent:1.5em;text-align:justify;font-size:18;}#title {text-align:center;font-family:Arial;font-size:16;font-weight:bold;}#manba{font-size: 80%; font-style: italic;}</style><body style=\"background: #1e1e1e;overflow-y: auto; overflow-x: hidden;color:#cbcdcb;\">";
-            webView.loadData(css_data + html_data, "text/html; charset=utf-8", "UTF-8");
+            webView.loadData(header + html_data, "text/html; charset=utf-8", "UTF-8");
             status = "tun";
         }
 
-        //registerForContextMenu(webView);
+//        registerForContextMenu(webView);
     }
 
     @Override

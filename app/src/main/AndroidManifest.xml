@@ -11,6 +11,7 @@
         android:allowBackup="true"
         android:icon="@drawable/app_icon_main"
         android:label="Оқимларга раддия"
+        android:usesCleartextTraffic="true"
         android:theme="@android:style/Theme.NoTitleBar" >
         <activity
             android:name=".MainActivity"
